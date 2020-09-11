@@ -1,0 +1,42 @@
+<div class="jumbotron text-center">    
+    <div class="container">
+        <h1 class="page-header">{{ message }}</h1>
+        <form>
+            Your Item:<br />
+            <input class="form-control form-control-lg" type="text" placeholder="Item"
+                ng-model="product.title"><br />
+            Description of Item:
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Description"
+                ng-model="product.desc"></textarea>
+            <br />
+            <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="addItem()">Add</button>
+            <br />
+            <br />
+            <h2>Item: {{product.title}} </h2>
+            <br />
+            <h2>Description: {{product.desc}} </h2>
+            <br />
+
+            <ul class="list-group" ng-show="!showCur">
+                <li class="d-flex list-group-item list-group-item-info" ng-repeat="product in products">
+                    <span class="col-sm-8">{{product.title + " - " + product.desc}}</span>
+
+                    <button type="button" class="btn btn-dark col-sm-2"
+                        ng-click="removeItem($index)">Delete</button>
+                    <span>&nbsp;</span>
+                    <button type="button" class="btn btn-dark col-sm-2" ng-click="displayItem($index)" >Open</button>
+
+                </li>
+            </ul>
+
+            <div ng-show="showCur">
+                {{cur.title + " - " + cur.desc}}
+                <br />
+                <button type="button" class="btn btn-secondary btn-lg btn-block" ng-click="backDisp()">Back</button>
+            </div>
+        </form>
+    </div>
+
+  
+</div>
+
