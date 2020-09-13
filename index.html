@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
-    <head>
+
+<head>
     <!-- load Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
@@ -11,33 +12,31 @@
     <!-- load Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    </head>
-    <body>
+</head>
 
-                <!-- HEADER AND NAVBAR -->
-                <header>
-                    <nav class="navbar navbar-default">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <a class="navbar-brand" href="/">Angular Routing Example</a>
-                        </div>
-        
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#!"><i class="fa fa-home"></i> Home</a></li>
-                            <li><a href="#!/about"><i class="fa fa-shield"></i> About</a></li>
-                        </ul>
-                    </div>
-                    </nav>
-                </header>
-        
-                <!-- MAIN CONTENT AND INJECTED VIEWS -->
-                    <!-- angular templating -->
-                    <!-- this is where content will be injected -->
-                    <div ng-view></div>
-        
-                <!-- JavaScript -->
-                <script src="app.js"></script>
-        
+<body>
 
-    </body>
+    <!-- Header AND Navbar -->
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Single Page Application Using AngularJS Routing</a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#!"><i class="fa fa-home"></i>Home</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content AND Injected Views -->
+    <div ng-view></div>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+
+</body>
+
 </html>
